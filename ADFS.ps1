@@ -87,9 +87,6 @@ if ($StorageAccountCheck.StorageAccountName -eq $Null) {
 
 Write-host "No Storage accounts exist, creating new storage account...."
 Start-sleep 5
-#Create Affinnity group using the Vnet name + append "-affinity", affinity group is required for creating a new storage account
-#New-AzureAffinityGroup -Name "$($vnet.name)$($affinitygroupname)" -Location $Vnet.Location -Description “Primary Affinity Group.”
-Start-Sleep 10
 $StorageAccountName = Read-Host "Please enter a name for your storage account, must be in all lower case letters"
 New-AzureStorageAccount –StorageAccountName $StorageAccountName -Location $Vnet.Location -Description “Primary storage account”
 #Set-AzureStorageAccount -StorageAccountName $StorageAccountName -GeoReplicationEnabled $true
