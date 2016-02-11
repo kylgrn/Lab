@@ -47,7 +47,6 @@ Write-Host Selected subscription: $subscriptionName.SubscriptionName -Foreground
     $Vnets = Get-AzureVnetSite 
     $StorageAccountCheck = Get-AzureStorageAccount | select StorageAccountName
 
-
 #Computer naming options, note that computer names can't be longer than 15 characters, be entirely numeric, or contain unsupported characters. 
 
     #Domain Controllers
@@ -107,8 +106,7 @@ $subscriptionid = Get-AzureSubscription | Where-Object {$_.iscurrent -eq “True
 
 $Storage=Get-AzureStorageAccount | Select-Object -ExpandProperty label
 
-Set-AzureSubscription -subscriptionid $subscription -CurrentStorageAccountname $storageaccountname.storageaccountname
-
+Set-AzureSubscription -subscriptionid $subscriptionid -CurrentStorageAccountname $storageaccountname.storageaccountname
 #SET PREFERRED IMAGE
 
 $imgnm = Get-AzureVMimage | where {$_.Label -like ‘Windows Server 2012 R2 Datacenter*’} | Select ImageFamily,Publisheddate,imagename| Out-GridView -Title "Select Windows Image to use for VM creation" -PassThru | select
