@@ -51,23 +51,23 @@ Write-Host Selected subscription: $subscriptionName.SubscriptionName -Foreground
 #Computer naming options, note that computer names can't be longer than 15 characters, be entirely numeric, or contain unsupported characters. 
 
     #Domain Controllers
-        $DC1=”Contoso-DC1”
-        $DC2=”Contoso-DC2”
-        $ADService=”Contoso-AD”
-        $ADAvailability=”Contoso-AD-Availability”
+        $DC1=”Caddislab-DC1”
+        $DC2=”Caddislab-DC2”
+        $ADService=”Caddislab-AD”
+        $ADAvailability=”Caddislab-AD-Availability”
     #ADFS Servers
-        $ADFS1=”Contoso-ADFS1”
-        $ADFS2=”Contoso-ADFS2”
-        $ADFSService=”Contoso-ADFS”
-        $ADFSAvailability=”Contoso-ADFS-Availability”
+        $ADFS1=”Caddislab-ADFS1”
+        $ADFS2=”Caddislab-ADFS2”
+        $ADFSService=”Caddislab-ADFS”
+        $ADFSAvailability=”Caddislab-ADFS-Availability”
     #WAP Servers
-        $WAP1=”Contoso-WAP1”
-        $WAP2=”Contoso-WAP2”
-        $WAPService=”Contoso-WAP”
-        $WAPAvailability=”Contoso-WAP-Availability”
+        $WAP1=”Caddislab-WAP1”
+        $WAP2=”Caddislab-WAP2”
+        $WAPService=”Caddislab-WAP”
+        $WAPAvailability=”Caddislab-WAP-Availability”
     #AAD Connect
-        $SYNC=”Contoso-sync”
-        $SYNCService=”Contoso-Apps”
+        $SYNC=”Caddislab-sync”
+        $SYNCService=”Caddislab-Apps”
 
 #Check for existing VNet, if no VNET exists, error out and tell the user to create one using the portal
 
